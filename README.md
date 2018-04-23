@@ -6,6 +6,7 @@ Core service file is key_value_storage.py, and build it into web service through
 To run the web service, use "pip install -r requirements.txt" in shell in the located folder to install required packets.
 
 some assumptions:
+* time is a counter inside the storage, because some operations take too short time to make differences in time
 * keys are unique, no duplicated username
 * diff(key, time1, time2) will return the values in the value set at time2 but not in the value set at time1.
 * For all operations except put, if the key doesn't exist in the storage, return None.
